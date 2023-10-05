@@ -1,113 +1,151 @@
-/* 
+/* Global Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #b0ad7d;
-    color: #333;
+    background-color: #2f2f2f; /* Set your desired background color */
 }
 
+/* Header Styles */
 .header {
-    background-color: #551414;
+    background-color: #333;
     color: #fff;
     padding: 10px;
+    text-align: right;
 }
 
-
-
-h1
-    {
-        background-color: rgb(195, 75, 195);
-    }
-h2, h3 {
-    background-color: #87ceeb;
+/* Heading Styles */
+h1, h2, h3 {
+        background-color: #87ceeb; /* Background color for headings */
+        color: #333; /* Text color for headings */
+        padding: 10px; /* Padding around headings */
+        border-radius: 5px; /* Rounded corners for headings */
+        text-align: center; /* Center-align text within headings */
 }
-
-ul {
-    list-style-type: square;
-}
-
-
 .movie-list {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #8c1c1c;
+    background-color: #f8f8f8;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
-  }
-  
-  .movie-list h1 {
-    color: #007bff;
+}
+
+.movie-list h1 {
+    color: #04172b;
     font-size: 28px;
-  }
-  
-  .movie-items {
+}
+
+.movie-items {
     list-style-type: none;
     padding: 0;
-  }
-  
-  .movie-item {
-    background-color: #f8f8f8;
+}
+
+.movie-item {
+    background-color: #fff;
     border: 1px solid #ddd;
     padding: 20px;
     margin: 10px 0;
     border-radius: 5px;
     display: flex;
     justify-content: space-between;
-  }
-  
-  .movie-header {
+}
+
+.movie-header {
     flex: 1;
-  }
-  
-  .movie-header h2 {
+}
+
+.movie-header h2 {
     font-size: 24px;
     margin: 0;
-  }
-  
-  .release-date {
+}
+
+.release-date {
     color: #555;
-  }
-  
-  .movie-details {
+}
+
+.movie-details {
     flex: 1;
     text-align: right;
-  }
-  
-  .available-seats {
+}
+
+.available-seats {
     font-weight: bold;
     color: #007bff;
-  }
-  
-  .btn {
+}
+
+.btn {
     text-decoration: none;
     padding: 8px 16px;
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
-  }
-  
-  .btn-primary {
+}
+
+.btn-primary {
     background-color: #007bff;
     color: #fff;
-  }
-  
-  .btn-primary:hover {
+}
+
+.btn-primary:hover {
     background-color: #0056b3;
-  }
-  
-  .btn-secondary {
+}
+
+.btn-secondary {
     background-color: #eee;
     color: #333;
-  }
-  
-  .btn-secondary:hover {
+}
+
+.btn-secondary:hover {
     background-color: #ccc;
-  }
-  
+}
 
+.user-info {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
 
-.booking-form {
+/* Apply CSS styles to the buttons within user-info div */
+.user-info .btn {
+    margin-left: 10px;
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Apply CSS styles to the main content section */
+.content {
+    padding: 20px;
+}
+
+/* Apply CSS styles to the footer section */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.auth-links .auth-link {
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color: #007bff; /* Change to your desired color */
+    color: #fff;
+    border-radius: 5px;
+    font-size: 18px; /* Change to your desired font size */
+    margin-left: 10px;
+}
+
+/* Additional styles for the "Login" and "Signup" links */
+.auth-links .auth-link:hover {
+    background-color: #0056b3; /* Change to your desired hover color */
+}
+
+/* Add this to your CSS file */
+
+.login-form {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
@@ -116,20 +154,16 @@ ul {
     border-radius: 5px;
   }
   
-  .booking-form h2 {
+  .login-form h2 {
     color: #007bff;
     font-size: 24px;
   }
   
-  .form-group {
-    margin-bottom: 20px;
+  .login-form form {
+    margin-top: 20px;
   }
   
-  label {
-    font-weight: bold;
-  }
-  
-  .form-control {
+  .login-form .form-control {
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
@@ -137,7 +171,7 @@ ul {
     font-size: 16px;
   }
   
-  button {
+  .login-form button {
     background-color: #007bff;
     color: #fff;
     border: none;
@@ -148,7 +182,111 @@ ul {
     transition: background-color 0.3s;
   }
   
-  button:hover {
+  .login-form button:hover {
     background-color: #0056b3;
   }
-   */
+  
+/* Add this to your CSS file */
+
+.registration-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  .registration-form h2 {
+    color: #007bff;
+    font-size: 24px;
+  }
+  
+  .registration-form form {
+    margin-top: 20px;
+  }
+  
+  .registration-form .form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .registration-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .registration-form button:hover {
+    background-color: #0056b3;
+  }
+
+/* Add this to your CSS file */
+
+.movie-details {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  .movie-details h1 {
+    color: #007bff;
+    font-size: 24px;
+  }
+  
+  .movie-details p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .movie-details .btn {
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .movie-details .btn-secondary {
+    background-color: #eee;
+    color: #333;
+  }
+  
+  .movie-details .btn-secondary:hover {
+    background-color: #ccc;
+  }
+  
+/* Add this to your CSS file */
+
+.user-profile {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  .user-profile h1 {
+    color: #007bff;
+    font-size: 24px;
+  }
+  
+  .user-profile p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  

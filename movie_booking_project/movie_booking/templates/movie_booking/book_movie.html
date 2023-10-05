@@ -4,7 +4,7 @@
 {% block content %}
   <div class="booking-form">
     <h2>Book Movie: {{ movie.title }}</h2>
-    <form method="post">
+    <form method="post" action="{% url 'book_movie' movie.id %}">
       {% csrf_token %}
       <div class="form-group">
         <label for="booking_type">Booking Type:</label>

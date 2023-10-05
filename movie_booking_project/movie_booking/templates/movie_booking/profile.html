@@ -1,7 +1,10 @@
 {% extends 'base.html' %}
-{% load static%}
+{% load static %}
+
 {% block content %}
-<h1>User Profile</h1>
-<p>Welcome, {{ user.username }}!</p>
-<p>Email: {{ user.email }}</p>
+  <div class="user-profile">
+    <h1>User Profile</h1>
+    <p>Welcome, {{ user.username }}!</p>
+    <p>Email: {{ user.email }}</p>
+  </div>
 {% endblock %}

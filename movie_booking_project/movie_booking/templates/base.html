@@ -1,4 +1,5 @@
-{% load static%}
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,33 +8,32 @@
     <link rel="stylesheet" type="text/css" href="{% static 'movie_booking/styles.css' %}">
 </head>
 <body>
-    <header>
-        <div class="user-info">
-            {% if user.is_authenticated %}
-                <span>Welcome, {{ user.username }}!</span>
-                <a href="{% url 'profile' %}">My Profile</a>
-                <a href="{% url 'logout' %}">Logout</a>
-            {% else %}
-                <a href="{% url 'login' %}">Login</a>
-                <a href="{% url 'signup' %}">Signup</a>
-            {% endif %}
+    <header class="header">
+        <div class="container">
+            <div class="user-info">
+                {% if user.is_authenticated %}
+                    <span>Welcome, {{ user.username }}!</span>
+                    <a href="{% url 'profile' %}" class="btn">My Profile</a>
+                    <a href="{% url 'logout' %}" class="btn">Logout</a>
+                {% else %}
+                    <a href="{% url 'login' %}" class="btn">Login</a>
+                    <a href="{% url 'signup' %}" class="btn">Signup</a>
+                {% endif %}
+            </div>
         </div>
     </header>
-    {% if messages %}
-    <div class="messages">
-        <ul class="messages">
-            {% for message in messages %}
-                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-            {% endfor %}
-        </ul>
-    </div>
-    {% endif %}
-    <main>
-        {% block content %}
-        {% endblock %}
+
+    <main class="content">
+        <div class="container">
+            {% block content %}
+            {% endblock %}
+        </div>
     </main>
-    <footer>
-        <!-- Footer content -->
+
+    <footer class="footer">
+        <div class="container">
+            <!-- Footer content -->
+        </div>
     </footer>
 </body>
 </html>
