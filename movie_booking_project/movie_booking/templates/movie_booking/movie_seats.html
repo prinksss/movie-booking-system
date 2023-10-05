@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static%}
+{% block content %}
+
+<h1>Movie: {{ movie.title }}</h1>
+<p>Total Seats: {{ movie.total_seats }}</p>
+<p>Booked Seats: {{ booked_seats }}</p>
+<p>Available Seats: {{ available_seats }}</p>
+
+<a href="{% url 'movie_list' %}">Back to Movie List</a>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% load static%}
+<h1>{{ movie.title }}</h1>
+<p>{{ movie.description }}</p>
+<p>Total Seats: {{ movie.total_seats }}</p>
+<p>Available Seats: {{ movie.total_seats - movie.seats_booked }}</p>
+<p>Booked Seats: {{ movie.seats_booked }}</p>
+
+<form method="post" action="{% url 'book_movie' movie.id %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Book Tickets</button>
+</form>

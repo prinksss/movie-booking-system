@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% load static%}
+{% block content %}
+<h1>My Booked Seats</h1>
+<ul>
+    {% for booking in bookings %}
+    <li><a href="{% url 'my_bookings' %}">My Booked Seats</a></li>
+        <li>
+            
+            Movie: {{ booking.movie.title }}
+            Booking Type: {{ booking.booking_type }}
+            Seat Count: {{ booking.seat_count }}
+        </li>
+    {% empty %}
+        <p>No bookings found.</p>
+    {% endfor %}
+</ul>
+<a href="{% url 'movie_list' %}">Back to Movie List</a>
+{% endblock %}

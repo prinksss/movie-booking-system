@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <div class="booking-form">
+    <h2>Book Movie: {{ movie.title }}</h2>
+    <form method="post">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="booking_type">Booking Type:</label>
+        <select class="form-control" name="booking_type" id="booking_type">
+          <option value="single">Single Ticket</option>
+          <option value="multiple">Multiple Tickets</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="seat_count">Number of Seats:</label>
+        <input class="form-control" type="number" name="seat_count" id="seat_count" min="1" required>
+      </div>
+
+      <button class="btn btn-primary" type="submit">Book</button>
+    </form>
+  </div>
+{% endblock %}
+

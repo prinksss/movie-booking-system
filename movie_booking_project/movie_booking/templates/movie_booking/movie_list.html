@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<body>
+  <div class="movie-list">
+    <h1>Movie List</h1>
+    <ul class="movie-items">
+      {% for movie in movies %}
+        <li class="movie-item">
+          <div class="movie-header">
+            <h2>{{ movie.title }}</h2>
+            <p class="release-date">Release Date: {{ movie.release_date }}</p>
+          </div>
+          <div class="movie-details">
+            <p class="available-seats">Available Seats: {{ movie.seats_available }}</p>
+            <a href="{% url 'movie_seats' movie.id %}" class="btn btn-secondary">View Seats</a>
+            <a href="{% url 'book_movie' movie.id %}" class="btn btn-primary">Book Now</a>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</body>
+{% endblock %}
